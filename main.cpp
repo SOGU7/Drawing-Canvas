@@ -60,69 +60,6 @@ int convertToYCoordinate(int i){return Y-i;}
 
 
 /*
-Function for taking ScreenShot starts here
-*/
-//void takeScreenShot()
-//{
-//    // Make the BYTE array, factor of 3 because it's RBG.
-//BYTE* pixels = new BYTE[ 3 * X * Y];
-//
-//glReadPixels(0, 0, X, Y, GL_RGB, GL_UNSIGNED_BYTE, pixels);
-//
-//// Convert to FreeImage format & save to file
-//FIBITMAP* image = FreeImage_ConvertFromRawBits(pixels, X, Y, 3 * X, 24, 0x0000FF, 0xFF0000, 0x00FF00, false);
-//FreeImage_Save(FIF_BMP, image, "B:\\Projects\\OpenGL projects\\Temporary\\temporarySceneryMaker\\test.bmp", 0);
-//
-//// Free resources
-//FreeImage_Unload(image);
-//delete [] pixels;
-//}
-//bool save_screenshot(char* filename, int w, int h)
-//{
-//  //This prevents the images getting padded
-// // when the width multiplied by 3 is not a multiple of 4
-//  glPixelStorei(GL_PACK_ALIGNMENT, 1);
-//
-//  int nSize = w*h*3;
-//  // First let's create our buffer, 3 channels per Pixel
-//  char* dataBuffer = (char*)malloc(nSize*sizeof(char));
-//
-//  if (!dataBuffer) return false;
-//
-//   // Let's fetch them from the backbuffer
-//   // We request the pixels in GL_BGR format, thanks to Berzeger for the tip
-//   glReadPixels((GLint)0, (GLint)0,
-//		(GLint)w, (GLint)h,
-//		 GL_BGR, GL_UNSIGNED_BYTE, dataBuffer);
-//
-//   //Now the file creation
-//   FILE *filePtr = fopen(filename.c_str(), "wb");
-//   if (!filePtr) return false;
-//
-//
-//   unsigned char TGAheader[12]={0,0,2,0,0,0,0,0,0,0,0,0};
-//   unsigned char header[6] = { w%256,w/256,
-//			       h%256,h/256,
-//			       24,0};
-//   // We write the headers
-//   fwrite(TGAheader,	sizeof(unsigned char),	12,	filePtr);
-//   fwrite(header,	sizeof(unsigned char),	6,	filePtr);
-//   // And finally our image data
-//   fwrite(dataBuffer,	sizeof(GLubyte),	nSize,	filePtr);
-//   fclose(filePtr);
-//
-//   free(dataBuffer);
-//
-//  return true;
-//}
-/*
-Function for taking ScreenShot ends here
-*/
-
-
-
-
-/*
 Generic drawing functions start here
 */
 
@@ -215,14 +152,6 @@ Generic Polygon drawing function ends here
 Generic drawing functions end here
 */
 
-
-
-
-
-
-/*
-Asha Mony coding starts here
-*/
 /*
 Cloud drawing function starts here
 */
@@ -549,20 +478,6 @@ void drawAScaledBoat(float scaleX, float scaleY ,int cx,int cy){
 Boat drawing function ends here
 */
 
-
-
-/*
-Asha Mony coding ends here
-*/
-
-
-
-
-
-/*
-Ahmed Muhammad Shafique -- Brush functions start here
-*/
-
 /*
 Grass brush starts here
 */
@@ -655,14 +570,6 @@ Rubber Ends here
 */
 
 /*
-Ahmed Muhammad Shafique -- Brush functions end here
-*/
-
-
-
-
-
-/*
 Mouse Draw helper functions start here
 */
 
@@ -723,14 +630,6 @@ Mouse Left click checker function ends here
 
 /*
 Mouse Draw helper functions ends here
-*/
-
-
-
-/*
-Functions collected from Internet starts here
-The mouse functions made by Rob Bateman have been modified and used here
-We are very grateful for this and other resources he provided
 */
 
 /*
